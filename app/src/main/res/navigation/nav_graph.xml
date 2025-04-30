@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/magicGalleryFragment">
+
+    <fragment
+        android:id="@+id/howtoPageFragment"
+        android:name="com.example.magicgallery.HowtoPageFragment"
+        android:label="HowtoPageFragment" >
+        <argument
+            android:name="howtoPageUri"
+            app:argType="android.net.Uri" />
+    </fragment>
+    <fragment
+        android:id="@+id/magicGalleryFragment"
+        android:name="com.example.magicgallery.MagicGalleryFragment"
+        android:label="MagicGalleryFragment" >
+        <action
+            android:id="@+id/show_howto"
+            app:destination="@id/howtoPageFragment" />
+    </fragment>
+</navigation>
